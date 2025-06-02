@@ -330,7 +330,7 @@ $baseDir = BASE_DIR;
                                 </div>
                                 <div class="help-content">
                                     <h4>Reporting Bugs</h4>
-                                    <p>If you encounter any bugs or unexpected behavior, please report them on our <a href="https://github.com/yourusername/zen-file-manager/issues" target="_blank" class="link">GitHub Issues page</a>.</p>
+                                    <p>If you encounter any bugs or unexpected behavior, please report them on our <a href="https://github.com/sculptorofcode/zen-file-manager/issues" target="_blank" class="link">GitHub Issues page</a>.</p>
                                 </div>
                             </div>
                         </div>

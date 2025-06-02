@@ -55,7 +55,7 @@ Zen File Manager is a clean, modern, and intuitive web-based file management sol
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/zen-file-manager.git
+   git clone https://github.com/sculptorofcode/zen-file-manager.git
    ```
 
 2. **Move to your web server directory**:
