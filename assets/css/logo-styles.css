@@ -1,0 +1,13 @@
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 0.75rem;
+}
