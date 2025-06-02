@@ -141,34 +141,34 @@ Modify settings in `includes/config.php` to adjust behavior:
 ## 📚 Code Structure
 
 ```
-├── assets/            # CSS, JS, and library files
-│   ├── css/           # Stylesheets
+├── assets/                      # CSS, JS, and library files
+│   ├── css/                     # Stylesheets
 │   │   └── improved-styles.css  # Main CSS file
-│   ├── js/            # JavaScript files
+│   ├── js/                      # JavaScript files
 │   │   ├── jquery.min.js        # jQuery library
 │   │   └── main.js              # Main application JS
-│   └── libs/          # External libraries
+│   └── libs/                    # External libraries
 │       └── font-awesome/        # Icons and fonts
-├── includes/          # PHP functions and modules
-│   ├── config.php              # Configuration settings
-│   ├── auth.php                # Authentication functions
-│   ├── breadcrumbs.php         # Navigation breadcrumbs
-│   ├── dir_operations.php      # Directory operation functions
-│   ├── file_operations.php     # File operation functions
-│   ├── file_utils.php          # File utility functions
-│   ├── functions.php           # General functions
-│   ├── session_manager.php     # Session handling
-│   ├── template_functions.php  # UI template functions
-│   ├── utils.php               # Utility functions
-│   └── layout/                 # Layout templates
-│       ├── error.php           # Error template
-│       └── footer.php          # Footer template
-├── about.php          # About page
-├── help.php           # Help documentation
-├── index.php          # Main application file
-├── login.php          # Authentication page
-├── logout.php         # Logout handler
-└── support.php        # Support information
+├── includes/                    # PHP functions and modules
+│   ├── config.php               # Configuration settings
+│   ├── auth.php                 # Authentication functions
+│   ├── breadcrumbs.php          # Navigation breadcrumbs
+│   ├── dir_operations.php       # Directory operation functions
+│   ├── file_operations.php      # File operation functions
+│   ├── file_utils.php           # File utility functions
+│   ├── functions.php            # General functions
+│   ├── session_manager.php      # Session handling
+│   ├── template_functions.php   # UI template functions
+│   ├── utils.php                # Utility functions
+│   └── layout/                  # Layout templates
+│       ├── error.php            # Error template
+│       └── footer.php           # Footer template
+├── about.php                    # About page
+├── help.php                     # Help documentation
+├── index.php                    # Main application file
+├── login.php                    # Authentication page
+├── logout.php                   # Logout handler
+└── support.php                  # Support information
 ```
 
 ## 🔒 Security Considerations
