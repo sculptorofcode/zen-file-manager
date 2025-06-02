@@ -233,7 +233,7 @@ $baseDir = BASE_DIR;
                                     <div class="sponsor-details">
                                         <h4>GitHub Sponsors</h4>
                                         <p>Support the project through GitHub's sponsorship program.</p>
-                                        <a href="https://github.com/sponsors/yourusername" target="_blank" class="btn btn-accent">
+                                        <a href="https://github.com/sponsors/sculptorofcode" target="_blank" class="btn btn-accent">
                                             Sponsor on GitHub
                                         </a>
                                     </div>
