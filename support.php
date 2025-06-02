@@ -65,7 +65,7 @@ $baseDir = BASE_DIR;
                                     <div class="support-details">
                                         <h4>GitHub Issues</h4>
                                         <p>Report bugs, request features, or ask technical questions through our GitHub repository.</p>
-                                        <a href="https://github.com/yourusername/zen-file-manager/issues" target="_blank" class="btn btn-secondary">
+                                        <a href="https://github.com/sculptorofcode/zen-file-manager/issues" target="_blank" class="btn btn-secondary">
                                             Open an Issue
                                         </a>
                                     </div>
@@ -154,7 +154,7 @@ $baseDir = BASE_DIR;
                                             <li>Improving documentation</li>
                                             <li>Sharing the project with others</li>
                                         </ul>
-                                        <p>Please see our <a class="link" href="https://github.com/yourusername/zen-file-manager/blob/main/CONTRIBUTING.md" target="_blank">contribution guidelines</a> for more details.</p>
+                                        <p>Please see our <a class="link" href="https://github.com/sculptorofcode/zen-file-manager/blob/main/CONTRIBUTING.md" target="_blank">contribution guidelines</a> for more details.</p>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@ $baseDir = BASE_DIR;
                             </div>
                             
                             <div class="github-cta">
-                                <a href="https://github.com/yourusername/zen-file-manager" target="_blank" class="btn btn-primary">
+                                <a href="https://github.com/sculptorofcode/zen-file-manager" target="_blank" class="btn btn-primary">
                                     <i class="fab fa-github"></i> Visit GitHub Repository
                                 </a>
                             </div>
@@ -233,7 +233,7 @@ $baseDir = BASE_DIR;
                                     <div class="sponsor-details">
                                         <h4>GitHub Sponsors</h4>
                                         <p>Support the project through GitHub's sponsorship program.</p>
-                                        <a href="https://github.com/sponsors/yourusername" target="_blank" class="btn btn-accent">
+                                        <a href="https://github.com/sponsors/sculptorofcode" target="_blank" class="btn btn-accent">
                                             Sponsor on GitHub
                                         </a>
                                     </div>

@@ -166,7 +166,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📬 Contact
 
-Project Link: [https://github.com/yourusername/zen-file-manager](https://github.com/yourusername/zen-file-manager)
+Project Link: [https://github.com/sculptorofcode/zen-file-manager](https://github.com/sculptorofcode/zen-file-manager)
 
 ---
 
