@@ -59,6 +59,22 @@ a {
     text-decoration: none;
 }
 
+/* Logo styling */
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    margin-right: 0.75rem;
+}
+
+/* End logo styling */
+
 .link {
     transition: var(--transition);
     color: var(--primary-color);
@@ -86,90 +102,6 @@ a {
     &:visited {
         color: var(--secondary-color, purple);
     }
-}
-
-.container {
-    width: 100%;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    display: grid;
-    gap: 2rem;
-    position: relative;
-    overflow-x: hidden;
-}
-
-.container-fluid {
-    width: 100%;
-    padding: 1.5rem;
-    display: grid;
-    gap: 2rem;
-    position: relative;
-    overflow-x: hidden;
-}
-
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-/* Responsive Grid System */
-.col-md-6, .col-lg-4, .col-xl-3 {
-    flex: 1;
-    min-width: 0;
-    box-sizing: border-box;
-    padding: 0 0.75rem;
-}
-
-/* Base column behavior */
-[class*="col-"] {
-    width: 100%;
-}
-
-/* Medium screens (tablets) */
-@media (min-width: 768px) {
-    .col-md-6 {
-        flex: 0 0 calc(50% - 1.5rem);
-        max-width: calc(50% - 1.5rem);
-    }
-}
-
-/* Large screens (desktops) */
-@media (min-width: 992px) {
-    .col-lg-4 {
-        flex: 0 0 calc(33.333% - 1.5rem);
-        max-width: calc(33.333% - 1.5rem);
-    }
-}
-
-/* Extra large screens */
-@media (min-width: 1200px) {
-    .col-xl-3 {
-        flex: 0 0 calc(25% - 1.5rem);
-        max-width: calc(25% - 1.5rem);
-    }
-}
-
-/* Column utilities */
-.col-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
-.col-6 {
-    flex: 0 0 calc(50% - 1.5rem);
-    max-width: calc(50% - 1.5rem);
-}
-
-.col-4 {
-    flex: 0 0 calc(33.333% - 1.5rem);
-    max-width: calc(33.333% - 1.5rem);
-}
-
-.col-3 {
-    flex: 0 0 calc(25% - 1.5rem);
-    max-width: calc(25% - 1.5rem);
 }
 
 
