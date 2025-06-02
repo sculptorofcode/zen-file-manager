@@ -126,16 +126,13 @@ if (isset($_GET['render'])) {
 // Generate breadcrumb navigation
 $breadcrumbs = generateBreadcrumbs($currentDir, $baseDir);
 
-?>
-
-<?php
-// Set page specific variables before including header
+// Set the page title
 $pageTitle = 'Zen File Manager';
 $additionalHeadContent = addJsVariables($_SESSION['copy_buffer'] ?? [], $_SESSION['buffer_operation'] ?? null);
 $breadcrumbHtml = renderBreadcrumbs($breadcrumbs);
 
-// Include the header template
-include 'includes/layout/header.php';
+// Include header
+require_once 'includes/layout/header.php';
 ?>
 
 <div class="action-bar">

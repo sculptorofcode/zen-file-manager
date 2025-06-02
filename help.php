@@ -14,14 +14,12 @@ $statusType = $status['statusType'];
 
 // Get current directory for breadcrumb
 $baseDir = BASE_DIR;
-?>
 
-<?php
-// Set page specific variables before including header
+// Set page title
 $pageTitle = 'Help - Zen File Manager';
 $breadcrumbLinks = ['help.php' => 'Help'];
 
-// Include the header template
+// Include header
 include 'includes/layout/header.php';
 ?>
 

@@ -14,15 +14,13 @@ $statusType = $status['statusType'];
 
 // Get current directory for breadcrumb
 $baseDir = BASE_DIR;
-?>
 
-<?php
-// Set page specific variables before including header
+// Set the page title
 $pageTitle = 'About - Zen File Manager';
 $breadcrumbLinks = ['about.php' => 'About'];
 
-// Include the header template
-include 'includes/layout/header.php';
+// Include header
+require_once 'includes/layout/header.php';
 ?>
 
 <div class="page-content">
@@ -111,8 +109,8 @@ include 'includes/layout/header.php';
                         <div class="profile-container">
                             <!-- Profile Header Row -->
                             <div class="profile-row profile-header-row">
-                                <div class="profile-avatar">
-                                    <i class="fas fa-user-circle"></i>
+                                <div class="profile-avatar overflow-hidden">
+                                    <img src="https://wbeokcjfdnizxajsdghm.supabase.co/storage/v1/object/public/profiles/profile-1747994311801.jpg" alt="" class="img-fluid">
                                 </div>
                                 <div class="profile-info">
                                     <h4>Saikat Roy</h4>
@@ -268,12 +266,10 @@ include 'includes/layout/header.php';
     </a>
 </div>
 
-<?php include 'includes/layout/footer.php'; ?>
-</div>
-</div>
-
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.js"></script>
+
+<?php include 'includes/layout/footer.php'; ?>
 </body>
 
 </html>

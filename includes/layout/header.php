@@ -1,12 +1,20 @@
 <?php
 /**
- * Header template for all pages
- * Contains the doctype, head section, and beginning of body with common layout elements
+ * Header layout template
+ * 
+ * Displays the header section including logo, title and breadcrumb navigation.
+ * 
+ * Usage: include 'includes/layout/header.php';
+ * 
+ * Requires variables:
+ * $pageTitle - Title of the current page
+ * $breadcrumbs - Array of breadcrumb links (optional, for file browsing pages)
  */
 
-// Default values if not passed
-$pageTitle = $pageTitle ?? 'Zen File Manager';
-$breadcrumbLinks = $breadcrumbLinks ?? [];
+// Set default page title if not provided
+if (!isset($pageTitle)) {
+    $pageTitle = 'File Manager';
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,12 +23,28 @@ $breadcrumbLinks = $breadcrumbLinks ?? [];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
+    <link rel="icon" href="assets/img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/libs/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/improved-styles.css">
     <?php if (isset($additionalHeadContent)) echo $additionalHeadContent; ?>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Zen File Manager - A powerful and user-friendly tool for managing your files and directories">
+    <meta name="keywords" content="file manager, file browser, file upload, file sharing, document management">
+    <meta name="author" content="Zen File Manager">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle); ?>">
+    <meta property="og:description" content="Zen File Manager - Easily manage, upload, and organize your files">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+    <meta property="og:image" content="assets/img/zen-file-manager-banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- / SEO Meta Tags -->
+
 </head>
 
 <body>
@@ -29,7 +53,7 @@ $breadcrumbLinks = $breadcrumbLinks ?? [];
         <div class="decorative-shape shape2"></div>
         <div class="decorative-shape shape3"></div>
 
-        <div class="container">
+        <div class="container mt-5">
             <div class="header">
                 <div class="logo-container">
                     <img src="assets/img/logo.png" alt="Zen File Manager" class="logo">

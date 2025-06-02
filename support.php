@@ -14,14 +14,12 @@ $statusType = $status['statusType'];
 
 // Get current directory for breadcrumb
 $baseDir = BASE_DIR;
-?>
 
-<?php
-// Set page specific variables before including header
+// Set page title
 $pageTitle = 'Support - Zen File Manager';
 $breadcrumbLinks = ['support.php' => 'Support'];
 
-// Include the header template
+// Include header
 include 'includes/layout/header.php';
 ?>
 
@@ -59,19 +57,6 @@ include 'includes/layout/header.php';
                             <p>Our comprehensive documentation includes installation guides, usage instructions, and FAQs.</p>
                             <a href="help.php" class="btn btn-secondary">
                                 View Documentation
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="support-option">
-                        <div class="support-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="support-details">
-                            <h4>Email Support</h4>
-                            <p>For private inquiries or specialized support needs, reach out via email.</p>
-                            <a href="mailto:support@zenfilemanager.example.com" class="btn btn-secondary">
-                                Email Support
                             </a>
                         </div>
                     </div>
