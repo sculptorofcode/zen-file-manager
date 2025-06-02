@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-purple.svg)](https://php.net)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)](https://github.com/yourusername/zen-file-manager)
+[![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)](https://github.com/sculptorofcode/zen-file-manager)
 
 <div align="center">
   <img src="assets/img/zen-file-manager-banner.png" alt="Zen File Manager Banner" width="800">
@@ -58,7 +58,7 @@ Zen File Manager is a clean, modern, and intuitive web-based file management sol
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/zen-file-manager.git
+   git clone https://github.com/sculptorofcode/zen-file-manager.git
    ```
 
 2. **Move to your web server directory**:
@@ -216,7 +216,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📬 Contact & Support
 
-- Project Link: [https://github.com/yourusername/zen-file-manager](https://github.com/yourusername/zen-file-manager)
+- Project Link: [https://github.com/sculptorofcode/zen-file-manager](https://github.com/sculptorofcode/zen-file-manager)
 - For help and support, please check the [help.php](help.php) and [support.php](support.php) pages
 - Submit bug reports and feature requests through GitHub Issues
 
