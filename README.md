@@ -3,14 +3,16 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![PHP Version](https://img.shields.io/badge/PHP-7.4%2B-purple.svg)](https://php.net)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Version](https://img.shields.io/badge/version-1.0.0-orange.svg)](https://github.com/yourusername/zen-file-manager)
 
 <div align="center">
-  <img src="https://via.placeholder.com/800x400?text=Zen+File+Manager" alt="Zen File Manager Banner" width="800">
+  <img src="assets/img/zen-file-manager-banner.png" alt="Zen File Manager Banner" width="800">
+  <p><em>Version 1.0.0 - Released June 2025</em></p>
 </div>
 
 ## ✨ Overview
 
-Zen File Manager is a clean, modern, and intuitive web-based file management solution that enables you to effortlessly browse, manipulate, and organize your files and directories through a beautiful, responsive interface. Built with PHP and modern web technologies, it provides a seamless file management experience directly from your browser.
+Zen File Manager is a clean, modern, and intuitive web-based file management solution that enables you to effortlessly browse, manipulate, and organize your files and directories through a beautiful, responsive interface. Built with PHP and modern web technologies, it provides a seamless file management experience directly from your browser with built-in authentication for enhanced security.
 
 ## 🚀 Features
 
@@ -50,15 +52,26 @@ Zen File Manager is a clean, modern, and intuitive web-based file management sol
 - PHP 7.4 or higher
 - Web server with PHP support (Apache, Nginx, etc.)
 - Modern browser (Chrome, Firefox, Safari, Edge)
+- Session support enabled in PHP
 
 ## 🔧 Installation
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/sculptorofcode/zen-file-manager.git
+   git clone https://github.com/yourusername/zen-file-manager.git
    ```
 
 2. **Move to your web server directory**:
+   For XAMPP users:
+   ```bash
+   # On Windows
+   xcopy /E /I zen-file-manager C:\xampp\htdocs\file-manager\
+   
+   # On Linux/macOS
+   cp -R zen-file-manager /opt/lampp/htdocs/file-manager/
+   ```
+   
+   For other web servers:
    ```bash
    mv zen-file-manager /path/to/your/webserver/
    ```
@@ -69,15 +82,17 @@ Zen File Manager is a clean, modern, and intuitive web-based file management sol
    define('BASE_DIR', '/absolute/path/to/directory');
    ```
 
-4. **Set proper permissions**:
+4. **Set proper permissions** (Linux/macOS only):
    ```bash
-   chmod -R 755 /path/to/zen-file-manager
+   chmod -R 755 /path/to/file-manager
    ```
 
 5. **Access through your web browser**:
    ```
-   http://localhost/zen-file-manager/
+   http://localhost/file-manager/
    ```
+   
+   You'll be directed to the login page for authentication.
 
 ## 🖥️ Usage
 
@@ -128,22 +143,46 @@ Modify settings in `includes/config.php` to adjust behavior:
 ```
 ├── assets/            # CSS, JS, and library files
 │   ├── css/           # Stylesheets
+│   │   └── improved-styles.css  # Main CSS file
 │   ├── js/            # JavaScript files
+│   │   ├── jquery.min.js        # jQuery library
+│   │   └── main.js              # Main application JS
 │   └── libs/          # External libraries
+│       └── font-awesome/        # Icons and fonts
 ├── includes/          # PHP functions and modules
-│   ├── config.php     # Configuration settings
-│   ├── file_operations.php  # File operation functions
-│   ├── dir_operations.php   # Directory operation functions
-│   └── ...            # Other function files
-└── index.php          # Main application file
+│   ├── config.php              # Configuration settings
+│   ├── auth.php                # Authentication functions
+│   ├── breadcrumbs.php         # Navigation breadcrumbs
+│   ├── dir_operations.php      # Directory operation functions
+│   ├── file_operations.php     # File operation functions
+│   ├── file_utils.php          # File utility functions
+│   ├── functions.php           # General functions
+│   ├── session_manager.php     # Session handling
+│   ├── template_functions.php  # UI template functions
+│   ├── utils.php               # Utility functions
+│   └── layout/                 # Layout templates
+│       ├── error.php           # Error template
+│       └── footer.php          # Footer template
+├── about.php          # About page
+├── help.php           # Help documentation
+├── index.php          # Main application file
+├── login.php          # Authentication page
+├── logout.php         # Logout handler
+└── support.php        # Support information
 ```
 
 ## 🔒 Security Considerations
 
-- This application is intended for private networks or controlled environments
-- Consider adding authentication for public installations
-- Regularly check for updates to maintain security
-- Limit access to sensitive directories through configuration
+- This application includes built-in authentication for basic security
+- For public-facing installations, consider adding:
+  - HTTPS encryption (SSL/TLS certificates)
+  - Enhanced authentication mechanisms (2FA, OAuth, etc.)
+  - Request rate limiting
+  - IP-based access restrictions
+- Regularly update your PHP version and dependencies
+- Limit access to sensitive directories through proper configuration
+- Back up important files before performing bulk operations
+- Review all file permissions in production environments
 
 ## 🤝 Contributing
 
@@ -159,17 +198,32 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+## 🆕 What's New in Version 1.0.0 (June 2025)
+
+- **User Authentication System** for enhanced security
+- **Session Management** for improved user experience
+- **Improved UI** with responsive design
+- **Breadcrumb Navigation** for easy directory traversal
+- **File Preview** support for multiple file types
+- **Enhanced Error Handling** with detailed feedback
+- **Support for Multiple Languages** (coming soon)
+
 ## 🙏 Acknowledgements
 
 - [Font Awesome](https://fontawesome.com) for the beautiful icons
 - [jQuery](https://jquery.com) for simplifying JavaScript operations
+- All contributors who have invested their time and efforts
 
-## 📬 Contact
+## 📬 Contact & Support
 
-Project Link: [https://github.com/yourusername/zen-file-manager](https://github.com/yourusername/zen-file-manager)
+- Project Link: [https://github.com/yourusername/zen-file-manager](https://github.com/yourusername/zen-file-manager)
+- For help and support, please check the [help.php](help.php) and [support.php](support.php) pages
+- Submit bug reports and feature requests through GitHub Issues
 
 ---
 
 <div align="center">
   <sub>Built with ❤️ by contributors worldwide</sub>
+  <br>
+  <sub>Copyright © 2025 Zen File Manager. All rights reserved.</sub>
 </div>

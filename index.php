@@ -5,9 +5,17 @@ require_once 'includes/file_utils.php';
 require_once 'includes/file_operations.php';
 require_once 'includes/dir_operations.php';
 require_once 'includes/session_manager.php';
+require_once 'includes/auth.php';
 require_once 'includes/breadcrumbs.php';
 require_once 'includes/template_functions.php';
 require_once 'includes/utils.php';
+
+// Check if user is authenticated
+if (!is_authenticated()) {
+    // Redirect to login page
+    header('Location: login.php');
+    exit;
+}
 
 // Get current directory and validate it
 $baseDir = BASE_DIR;

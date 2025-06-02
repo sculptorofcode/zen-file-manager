@@ -6,28 +6,31 @@
  * 
  * @return array An array containing status message and type, if any
  */
-function initializeSession() {
-    session_start();
+function initializeSession()
+{
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
     // Initialize the copy buffer if it doesn't exist
     if (!isset($_SESSION['copy_buffer'])) {
         $_SESSION['copy_buffer'] = [];
         $_SESSION['buffer_operation'] = null; // Can be 'copy' or 'cut'
     }
-    
+
     // Check for messages from previous actions
     $statusMessage = '';
     $statusType = '';
-    
+
     if (isset($_SESSION['status_message'])) {
         $statusMessage = $_SESSION['status_message'];
         $statusType = $_SESSION['status_type'];
-        
+
         // Clear the messages
         unset($_SESSION['status_message']);
         unset($_SESSION['status_type']);
     }
-    
+
     return [
         'statusMessage' => $statusMessage,
         'statusType' => $statusType
@@ -40,7 +43,8 @@ function initializeSession() {
  * @param string $message The message to set
  * @param string $type The message type (success or error)
  */
-function setStatusMessage($message, $type = 'success') {
+function setStatusMessage($message, $type = 'success')
+{
     $_SESSION['status_message'] = $message;
     $_SESSION['status_type'] = $type;
 }
@@ -54,14 +58,15 @@ function setStatusMessage($message, $type = 'success') {
  * @param string $baseDir The base directory
  * @return void
  */
-function handleCopyBuffer($selectedItems, $operation, $currentDir, $baseDir) {
+function handleCopyBuffer($selectedItems, $operation, $currentDir, $baseDir)
+{
     $_SESSION['copy_buffer'] = [];
     // Set the operation type
     $_SESSION['buffer_operation'] = $operation;
-    
+
     foreach ($selectedItems as $item) {
         $itemPath = $currentDir . '/' . basename($item);
-        
+
         // Validate path is within allowed directory
         if (file_exists($itemPath) && strpos(realpath($itemPath), $baseDir) === 0) {
             $_SESSION['copy_buffer'][] = [
@@ -71,9 +76,9 @@ function handleCopyBuffer($selectedItems, $operation, $currentDir, $baseDir) {
             ];
         }
     }
-    
+
     $count = count($_SESSION['copy_buffer']);
-    
+
     if ($count > 0) {
         $verb = $operation === 'copy' ? 'copied' : 'cut';
         $message = "$count item" . ($count > 1 ? 's' : '') . " $verb to buffer.";
@@ -88,10 +93,11 @@ function handleCopyBuffer($selectedItems, $operation, $currentDir, $baseDir) {
 /**
  * Clear the copy buffer
  */
-function clearCopyBuffer() {
+function clearCopyBuffer()
+{
     $_SESSION['copy_buffer'] = [];
     $_SESSION['buffer_operation'] = null;
-    
+
     setStatusMessage("Buffer cleared.", 'success');
 }
 
@@ -100,20 +106,21 @@ function clearCopyBuffer() {
  * 
  * @return array The copy buffer and operation type
  */
-function getStatusMessages() {
+function getStatusMessages()
+{
     $statusMessage = '';
     $statusType = '';
-    
+
     // Check for messages from previous actions
     if (isset($_SESSION['status_message'])) {
         $statusMessage = $_SESSION['status_message'];
         $statusType = $_SESSION['status_type'];
-        
+
         // Clear the messages
         unset($_SESSION['status_message']);
         unset($_SESSION['status_type']);
     }
-    
+
     return [
         'message' => $statusMessage,
         'type' => $statusType
@@ -123,10 +130,10 @@ function getStatusMessages() {
 /**
  * Clear the copy/cut buffer
  */
-function clearBuffer() {
+function clearBuffer()
+{
     $_SESSION['copy_buffer'] = [];
     $_SESSION['buffer_operation'] = null;
-    
+
     setStatusMessage("Buffer cleared.");
 }
-?>
