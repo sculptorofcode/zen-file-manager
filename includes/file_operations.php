@@ -423,7 +423,13 @@ function handleFileRender($fileToRender, $currentDir, $baseDir) {
     
     // Validate the file path
     if (file_exists($filePath) && strpos(realpath($filePath), $baseDir) === 0) {
-        return str_replace($baseDir, '', realpath($filePath));
+        // Convert backslashes to forward slashes and ensure proper URL formatting
+        $relativePath = str_replace('\\', '/', str_replace($baseDir, '', realpath($filePath)));
+        $relativePath = ltrim($relativePath, '/'); // Remove leading slash for proper URL path
+        
+        // Create absolute URL using BASE_URL
+        $fullUrl = rtrim(BASE_URL, '/') . '/' . $relativePath;
+        return $fullUrl;
     }
     
     return null;
